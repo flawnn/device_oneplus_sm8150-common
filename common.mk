@@ -168,6 +168,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.btconfigstore@1.0.vendor
 
+PRODUCT_PACKAGES += \
+    android.hardware.bluetooth.a2dp@1.0-impl \
+    android.hardware.bluetooth.a2dp@1.0-service
+
+
 # Boot Control
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.0-impl:64 \
