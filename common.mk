@@ -91,6 +91,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     AntHalService
 
+# Device Settings
+PRODUCT_PACKAGES += \
+    DeviceSettings
+
 # Atrace
 PRODUCT_PACKAGES += \
     android.hardware.atrace@1.0-service
@@ -483,6 +487,14 @@ PRODUCT_PACKAGES += \
     android.hardware.thermal@1.0-impl \
     android.hardware.thermal@1.0-service \
     thermal.msmnile
+
+# Touch
+PRODUCT_PACKAGES += \
+    vendor.lineage.touch@1.0-service.oneplus_msmnile
+
+# tri-state key
+PRODUCT_PACKAGES += \
+    tri-state-key_daemon
 
 # Update engine
 PRODUCT_PACKAGES += \
