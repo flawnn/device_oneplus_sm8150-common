@@ -58,6 +58,8 @@ import com.revengeos.device.DeviceSettings.R;
 
 import vendor.oneplus.camera.CameraHIDL.V1_0.IOnePlusCameraProvider;
 
+import vendor.oneplus.camera.CameraHIDL.V1_0.IOnePlusCameraProvider;
+
 public class KeyHandler implements DeviceKeyHandler {
 
     private static final String TAG = KeyHandler.class.getSimpleName();
