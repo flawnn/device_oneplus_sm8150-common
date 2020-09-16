@@ -414,7 +414,10 @@ SRC_AUDIO_HAL_DIR := hardware/qcom-caf/sm8150/audio
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     device/oneplus/common \
-    hardware/qcom-caf/sm8150
+    hardware/qcom-caf/sm8150 \
+    hardware/qcom-caf/sm8150/audio \
+    hardware/qcom-caf/sm8150/media \
+    hardware/qcom-caf/sm8150/display
 
 # Remove unwanted packages
 PRODUCT_PACKAGES += \
