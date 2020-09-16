@@ -421,4 +421,6 @@
          and one pSIM) -->
     <integer name="config_num_physical_slots">2</integer>
 
+    <!-- Workaround to trim baseband version's string of some devices with duplicated baseband string -->
+    <bool name="config_trim_baseband_version_string">true</bool>
 </resources>
