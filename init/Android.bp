@@ -19,8 +19,11 @@ cc_library_static {
     recovery_available: true,
     srcs: ["init_oneplus-sm8150.cpp"],
     include_dirs: [
-        "system/core/base/include",
+       "system/core/base/include",
         "system/core/init"
-    ]
+    ], 
+    shared_libs: [
+        "libbase",
+    ],
 }
 
