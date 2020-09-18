@@ -297,6 +297,12 @@ PRODUCT_PACKAGES += \
     ethertypes \
     libebtc
 
+#HWBinder
+PRODUCT_PACKAGES += \
+    libhwbinder \
+    libhwbinder.vendor \
+    libhidltransport
+
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.oneplus_msmnile
@@ -463,13 +469,15 @@ PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service \
 
 # VNDK
-# Update this list with what each blob is actually for
 PRODUCT_PACKAGES += \
     com.android.vndk.current.on_vendor
 
 PRODUCT_COPY_FILES += \
     prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-core/libprotobuf-cpp-full.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libprotobuf-cpp-full.so \
     prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-core/libprotobuf-cpp-lite.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libprotobuf-cpp-lite.so
+
+PRODUCT_TARGET_VNDK_VERSION := 29
+PRODUCT_EXTRA_VNDK_VERSIONS := 29
 
 # Wifi
 PRODUCT_PACKAGES += \
