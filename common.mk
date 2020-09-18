@@ -234,13 +234,6 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-service \
     android.hardware.drm@1.2-service.clearkey
 
-# Fingerprint
-PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1-service.oneplus_msmnile \
-    vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.oneplus_msmnile \
-    vendor.oneplus.fingerprint.extension@1.0.vendor \
-    vendor.oneplus.hardware.display@1.0.vendor
-
 # For config.fs
 PRODUCT_PACKAGES += \
     fs_config_files
