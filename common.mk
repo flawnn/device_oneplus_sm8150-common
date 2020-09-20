@@ -156,12 +156,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES_DEBUG += \
     bootctl
 
-# Bluetooth
-PRODUCT_PACKAGES += \
-    liba2dpoffload \
-    libbthost_if \
-    vendor.qti.hardware.bluetooth_audio@2.0.vendor
-
 # Camera
 PRODUCT_PACKAGES += \
     android.frameworks.displayservice@1.0 \
