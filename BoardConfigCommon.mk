@@ -149,6 +149,9 @@ USE_DEVICE_SPECIFIC_GPS := true
 DEVICE_MATRIX_FILE := $(VENDOR_PATH)/compatibility_matrix.xml
 DEVICE_MANIFEST_FILE := $(VENDOR_PATH)/manifest.xml
 
+# Lights
+TARGET_PROVIDES_LIBLIGHT := true
+
 # Keystore
 TARGET_PROVIDES_KEYMASTER := true
 
