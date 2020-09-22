@@ -307,7 +307,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libhwbinder \
     libhwbinder.vendor \
-    libhidltransport
+    libhidltransport \
+    libhidhltransport.vendor
 
 # Lights
 PRODUCT_PACKAGES += \
@@ -353,6 +354,14 @@ PRODUCT_PACKAGES += \
 #    Tag \
 #    vendor.nxp.nxpese@1.0:64 \
 #    vendor.nxp.nxpnfc@1.0:64
+
+# AOSP NFC
+PRODUCT_PACKAGES += \
+     NfcNci \
+     SecureElement \
+     android.hardware.nfc@1.2-service
+
+
 
 # OMX
 PRODUCT_PACKAGES += \
