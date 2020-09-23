@@ -311,8 +311,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libhwbinder \
     libhwbinder.vendor \
-    libhidltransport \
-    libhidhltransport.vendor
+    libhidltransport
 
 # Lights
 PRODUCT_PACKAGES += \
@@ -359,18 +358,10 @@ PRODUCT_PACKAGES += \
 #    vendor.nxp.nxpese@1.0:64 \
 #    vendor.nxp.nxpnfc@1.0:64
 
-# AOSP NFC
-PRODUCT_PACKAGES += \
-     NfcNci \
-     SecureElement \
-     android.hardware.nfc@1.2-service
-
 
 # VNDK
 PRODUCT_COPY_FILES += \
       prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-sp/libc++.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libc++.so
-
-
 
 # OMX
 PRODUCT_PACKAGES += \
