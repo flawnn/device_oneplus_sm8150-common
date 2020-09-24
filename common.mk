@@ -274,7 +274,8 @@ PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
     android.hidl.base@1.0_system \
     android.hidl.manager@1.0 \
-    android.hidl.manager@1.0_system
+    android.hidl.manager@1.0_system \
+    android.hidl.base@1.0_vendor
 
 # HotwordEnrollement app permissions
 PRODUCT_COPY_FILES += \
@@ -363,9 +364,16 @@ PRODUCT_PACKAGES += \
 #    vendor.nxp.nxpnfc@1.0:64
 
 
+PRODUCT_PACKAGES += \
+     libgui_vendor
+
 # VNDK
 PRODUCT_COPY_FILES += \
-      prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-sp/libc++.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libc++.so
+      prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-sp/libc++.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libc++.so \
+      prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-sp/libutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libutils.so \
+      prebuilts/vndk/v29/arm64/arch-arm-armv8-a/shared/vndk-sp/libhidlbase.so:$(TARGET_COPY_OUT_VENDOR)/lib/libhidlbase-v29.so \
+      prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-sp/libhidlbase.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhidlbase-v29.so 
+
 
 # OMX
 PRODUCT_PACKAGES += \
