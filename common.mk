@@ -169,8 +169,8 @@ PRODUCT_PACKAGES += \
     libxml2 \
     Snap \
     libqti-perfd-client \
-    libgui_vendor \
     vendor.oneplus.camera.CameraHIDL@1.0.vendor \
+    android.hidl.memory.block@1.0 \
     vendor.qti.hardware.camera.device@1.0.vendor
 
 # CNE
@@ -353,18 +353,19 @@ PRODUCT_PACKAGES += \
     netutils-wrapper-1.0
 
 # NFC
-PRODUCT_PACKAGES += \
-    android.hardware.nfc@1.0:64 \
-    android.hardware.nfc@1.1:64 \
-    android.hardware.nfc@1.2:64 \
-    android.hardware.nfc@1.2-service \
-    android.hardware.secure_element@1.0:64 \
-    android.hardware.secure_element@1.1:64 \
-    android.hardware.secure_element@1.1-service \
-    com.android.nfc_extras \
-    Tag \
-    vendor.nxp.nxpese@1.0:64 \
-    vendor.nxp.nxpnfc@1.0:64
+#PRODUCT_PACKAGES += \
+#    android.hardware.nfc@1.0:64 \
+#    android.hardware.nfc@1.1:64 \
+#    android.hardware.nfc@1.2:64 \
+#    android.hardware.nfc@1.2-service \
+#    android.hardware.secure_element@1.0:64 \
+#    android.hardware.secure_element@1.1:64 \
+#    android.hardware.secure_element@1.1-service \
+#    com.android.nfc_extras \
+#    libmetricslogger \
+#    Tag \
+#    vendor.nxp.nxpese@1.0:64 \
+#    vendor.nxp.nxpnfc@1.0:64
 
 
 # VNDK
