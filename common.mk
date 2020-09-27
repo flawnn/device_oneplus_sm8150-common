@@ -174,9 +174,7 @@ PRODUCT_PACKAGES += \
     libxml2 \
     Snap \
     libqti-perfd-client \
-    vendor.oneplus.camera.CameraHIDL@1.0.vendor \
     android.hidl.memory.block@1.0 \
-    vendor.qti.hardware.camera.device@1.0.vendor
 
 # CNE
 PRODUCT_PACKAGES += \
@@ -440,7 +438,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl.oneplus_msmnile \
     android.hardware.sensors@1.0-service.oneplus_msmnile \
-    libsensorndkbridge
+    libsensorndkbridge \
+    libgui_vendor
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
