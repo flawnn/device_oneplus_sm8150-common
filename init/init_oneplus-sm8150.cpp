@@ -15,71 +15,66 @@
  * limitations under the License.
  */
 
-#include <android-base/logging.h>
+#include <cstdlib>
+#include <fstream>
+#include <string.h>
 #include <sys/sysinfo.h>
+#include <unistd.h>
+
 #include <android-base/properties.h>
 #define _REALLY_INCLUDE_SYS__SYSTEM_PROPERTIES_H_
 #include <sys/_system_properties.h>
 
-#include "property_service.h"
 #include "vendor_init.h"
 
+using android::base::GetProperty;
 using android::base::SetProperty;
 
-void SetProperty(char const prop[], char const value[])
-{
-    prop_info *pi;
+char const *heapstartsize;
+char const *heapgrowthlimit;
+char const *heapsize;
+char const *heapminfree;
+char const *heapmaxfree;
+char const *heaptargetutilization;
 
-    pi = (prop_info*) __system_property_find(prop);
-    if (pi)
-        __system_property_update(pi, value, strlen(value));
-    else
-        __system_property_add(prop, strlen(prop), value, strlen(value));
-}
-
-void load_12gb()
-{
-    SetProperty("dalvik.vm.heapstartsize","24m");
-    SetProperty("dalvik.vm.heapgrowthlimit","384m");
-    SetProperty("dalvik.vm.heaptargetutilization","0.42");
-    SetProperty("dalvik.vm.heapmaxfree","56m");
-}
-
-void load_8gb()
-{
-    SetProperty("dalvik.vm.heapstartsize","24m");
-    SetProperty("dalvik.vm.heapgrowthlimit","256m");
-    SetProperty("dalvik.vm.heaptargetutilization","0.46");
-    SetProperty("dalvik.vm.heapmaxfree","48m");
-}
-
-void load_6gb()
-{
-    SetProperty("dalvik.vm.heapstartsize","16m");
-    SetProperty("dalvik.vm.heapgrowthlimit","256m");
-    SetProperty("dalvik.vm.heaptargetutilization","0.5");
-    SetProperty("dalvik.vm.heapmaxfree","32m");
-}
-
-/* Get Ram size for different variants */
-void checkram_loadprops()
-{
+void check_device() {
     struct sysinfo sys;
     sysinfo(&sys);
     if (sys.totalram > 8192ull * 1024 * 1024) {
-        load_12gb();
-    }
-    else if(sys.totalram > 6144ull * 1024 * 1024){
-        load_8gb();
-    }
-    else if(sys.totalram > 4096ull * 1024 * 1024){
-        load_6gb();
+        // from - phone-xhdpi-12288-dalvik-heap.mk
+        heapstartsize = "24m";
+        heapgrowthlimit = "384m";
+        heapsize = "512m";
+        heaptargetutilization = "0.42";
+        heapminfree = "8m";
+        heapmaxfree = "56m";
+    } else if(sys.totalram > 6144ull * 1024 * 1024) {
+        // from - phone-xhdpi-8192-dalvik-heap.mk
+        heapstartsize = "24m";
+        heapgrowthlimit = "256m";
+        heapsize = "512m";
+        heaptargetutilization = "0.46";
+        heapminfree = "8m";
+        heapmaxfree = "48mm";
+    } else {
+        // from - phone-xhdpi-6144-dalvik-heap.mk
+        heapstartsize = "16m";
+        heapgrowthlimit = "256m";
+        heapsize = "512m";
+        heaptargetutilization = "0.5";
+        heapminfree = "8m";
+        heapmaxfree = "32mm";
     }
 }
 
 void vendor_load_properties()
 {
-    checkram_loadprops();
-    SetProperty("dalvik.vm.heapsize", "512m");
-    SetProperty("dalvik.vm.heapminfree", "8m");
+    check_device();
+
+    SetProperty("dalvik.vm.heapstartsize", heapstartsize);
+    SetProperty("dalvik.vm.heapgrowthlimit", heapgrowthlimit);
+    SetProperty("dalvik.vm.heapsize", heapsize);
+    SetProperty("dalvik.vm.heaptargetutilization", heaptargetutilization);
+    SetProperty("dalvik.vm.heapminfree", heapminfree);
+    SetProperty("dalvik.vm.heapmaxfree", heapmaxfree);
 }
