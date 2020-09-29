@@ -222,6 +222,15 @@
         <fqname>@1.2::IDevice/qti-dsp</fqname>
         <fqname>@1.2::IDevice/qti-gpu</fqname>
         <fqname>@1.2::IDevice/qti-hta</fqname>
+   </hal>
+   <hal format="hidl">
+        <name>android.hardware.nfc</name>
+        <transport>hwbinder</transport>
+        <version>1.2</version>
+        <interface>
+            <name>INfc</name>
+            <instance>default</instance>
+        </interface>
     </hal>
     <hal format="hidl">
         <name>android.hardware.radio</name>
@@ -942,4 +951,9 @@
             <instance>default</instance>
         </interface>
     </hal>
+<hal format="hidl">
+    <name>vendor.qti.hardware.data.latency</name>
+    <transport>hwbinder</transport
+    <fqname>@1.0::ILinkLatency/default</fqname>
+</hal>
 </manifest>
