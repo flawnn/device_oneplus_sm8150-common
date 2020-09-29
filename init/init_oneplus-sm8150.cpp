@@ -80,6 +80,4 @@ void checkram_loadprops()
 void vendor_load_properties()
 {
     checkram_loadprops();
-    SetProperty("dalvik.vm.heapsize", "512m");
-    SetProperty("dalvik.vm.heapminfree", "8m");
 }
