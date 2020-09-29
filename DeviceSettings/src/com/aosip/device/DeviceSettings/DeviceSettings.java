@@ -89,6 +89,7 @@ public class DeviceSettings extends PreferenceFragment
             getPreferenceScreen().removePreference((Preference) findPreference("vibrator"));
         }
 
+	mTopKeyPref = (ListPreference) findPreference(Constants.NOTIF_SLIDER_TOP_KEY);
         mTopKeyPref.setValueIndex(Constants.getPreferenceInt(getContext(), Constants.NOTIF_SLIDER_TOP_KEY));
         mTopKeyPref.setOnPreferenceChangeListener(this);
         mMiddleKeyPref = (ListPreference) findPreference(Constants.NOTIF_SLIDER_MIDDLE_KEY);
