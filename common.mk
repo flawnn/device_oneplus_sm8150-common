@@ -360,19 +360,13 @@ PRODUCT_PACKAGES += \
     netutils-wrapper-1.0
 
 # NFC
-#PRODUCT_PACKAGES += \
-#    android.hardware.nfc@1.0:64 \
-#    android.hardware.nfc@1.1:64 \
-#    android.hardware.nfc@1.2:64 \
-#    android.hardware.nfc@1.2-service \
-#    android.hardware.secure_element@1.0:64 \
-#    android.hardware.secure_element@1.1:64 \
-#    android.hardware.secure_element@1.1-service \
-#    com.android.nfc_extras \
-#    libmetricslogger \
-#    Tag \
-#    vendor.nxp.nxpese@1.0:64 \
-#    vendor.nxp.nxpnfc@1.0:64
+PRODUCT_PACKAGES += \
+    android.hardware.nfc@1.2-service \
+    android.hardware.secure_element@1.1-service \
+    com.android.nfc_extras \
+    NfcNci \
+    SecureElement \
+    Tag
 
 
 # VNDK
@@ -461,10 +455,6 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     device/oneplus/common \
     hardware/qcom-caf/sm8150
-
-# Remove unwanted packages
-PRODUCT_PACKAGES += \
-    RemovePackages
 
 # Telephony
 PRODUCT_PACKAGES += \
