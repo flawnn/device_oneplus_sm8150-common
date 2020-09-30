@@ -137,17 +137,6 @@
       "ResetOnInit": true
     },
     {
-      "Name": "CDSchedtuneBoost",
-      "Path": "/dev/stune/camera-daemon/schedtune.boost",
-      "Values": [
-        "10",
-        "1",
-        "0"
-      ],
-      "DefaultIndex": 2,
-      "ResetOnInit": true
-    },
-    {
       "Name": "CPUBWHystTriggerCount",
       "Path": "/sys/class/devfreq/soc:qcom,cpu-cpu-llcc-bw/bw_hwmon/hyst_trigger_count",
       "Values": [
@@ -294,15 +283,6 @@
       "ResetOnInit": true
     },
     {
-      "Name": "SchedFeatures",
-      "Path": "/sys/kernel/debug/sched_features",
-      "Values": [
-        "NO_ENERGY_AWARE",
-        "ENERGY_AWARE"
-      ],
-      "ResetOnInit": true
-    },
-    {
       "Name": "PowerHALMainState",
       "Path": "vendor.powerhal.state",
       "Values": [
@@ -433,12 +413,6 @@
     },
     {
       "PowerHint": "LAUNCH",
-      "Node": "SchedFeatures",
-      "Duration": 5000,
-      "Value": "NO_ENERGY_AWARE"
-    },
-    {
-      "PowerHint": "LAUNCH",
       "Node": "CPUBigClusterMaxFreq",
       "Duration": 5000,
       "Value": "9999999"
@@ -541,12 +515,6 @@
     },
     {
       "PowerHint": "CAMERA_LAUNCH",
-      "Node": "SchedFeatures",
-      "Duration": 1000,
-      "Value": "NO_ENERGY_AWARE"
-    },
-    {
-      "PowerHint": "CAMERA_LAUNCH",
       "Node": "CPUBigClusterMaxFreq",
       "Duration": 1000,
       "Value": "9999999"
@@ -636,12 +604,6 @@
       "Value": "10"
     },
     {
-      "PowerHint": "CAMERA_STREAMING",
-      "Node": "CDSchedtuneBoost",
-      "Duration": 0,
-      "Value": "1"
-    },
-    {
       "PowerHint": "CAMERA_STREAMING_60FPS",
       "Node": "PowerHALMainState",
       "Duration": 0,
@@ -658,12 +620,6 @@
       "Node": "CPUBigPlusClusterMaxFreq",
       "Duration": 0,
       "Value": "2016000"
-    },
-    {
-      "PowerHint": "CAMERA_STREAMING_60FPS",
-      "Node": "CDSchedtuneBoost",
-      "Duration": 0,
-      "Value": "1"
     },
     {
       "PowerHint": "CAMERA_STREAMING_60FPS",
@@ -829,12 +785,6 @@
     },
     {
       "PowerHint": "CAMERA_SHOT",
-      "Node": "SchedFeatures",
-      "Duration": 1000,
-      "Value": "NO_ENERGY_AWARE"
-    },
-    {
-      "PowerHint": "CAMERA_SHOT",
       "Node": "CPUBigClusterMaxFreq",
       "Duration": 1000,
       "Value": "9999999"
@@ -919,3 +869,5 @@
     }
   ]
 }
+
+

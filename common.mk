@@ -394,7 +394,7 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.3-service.pixel-libperfmgr \
+    android.hardware.power@1.3-service.oneplus_msmnile-libperfmgr \
     android.hardware.power.stats@1.0-service.oneplus_msmnile
 
 PRODUCT_COPY_FILES += \
