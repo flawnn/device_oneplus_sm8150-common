@@ -49,6 +49,13 @@ vendor.qcom.bluetooth.soc=cherokee
 ro.crypto.allow_encrypt_override=true
 ro.crypto.volume.filenames_mode=aes-256-cts
 
+# Dalvik
+dalvik.vm.heapmaxfree=8m
+dalvik.vm.heapminfree=512k
+dalvik.vm.heapsize=512m
+dalvik.vm.heapstartsize=8m
+dalvik.vm.heaptargetutilization=0.75
+
 # Charger
 ro.charger.enable_suspend=true
 
