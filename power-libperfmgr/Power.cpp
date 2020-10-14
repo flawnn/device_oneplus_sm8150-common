@@ -15,7 +15,7 @@
  */
 
 #define ATRACE_TAG (ATRACE_TAG_POWER | ATRACE_TAG_HAL)
-#define LOG_TAG "android.hardware.power@1.3-service.pixel-libperfmgr"
+#define LOG_TAG "android.hardware.power@1.3-service.oneplus_msmnile-libperfmgr"
 
 #define TAP_TO_WAKE_NODE "/sys/devices/virtual/touch/tp_dev/gesture_on"
 
