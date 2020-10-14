@@ -17,7 +17,7 @@
 #define ATRACE_TAG (ATRACE_TAG_POWER | ATRACE_TAG_HAL)
 #define LOG_TAG "android.hardware.power@1.3-service.oneplus_msmnile-libperfmgr"
 
-#define TAP_TO_WAKE_NODE "/sys/devices/virtual/touch/tp_dev/gesture_on"
+#define TAP_TO_WAKE_NODE "/proc/touchpanel/double_tap_enable"
 
 #include <android-base/file.h>
 #include <android-base/logging.h>
