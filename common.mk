@@ -21,10 +21,6 @@ DEVICE_PACKAGE_OVERLAYS += \
 # A/B
 AB_OTA_UPDATER := true
 
-# VNDK
- PRODUCT_TARGET_VNDK_VERSION := 29
- PRODUCT_EXTRA_VNDK_VERSIONS := 29
-
 AB_OTA_PARTITIONS += \
     boot \
     dtbo \
@@ -102,8 +98,8 @@ PRODUCT_PACKAGES += \
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio@2.0-service \
-    android.hardware.audio@6.0-impl \
-    android.hardware.audio.effect@6.0-impl \
+    android.hardware.audio@5.0-impl \
+    android.hardware.audio.effect@5.0-impl \
     android.hardware.audio.common@2.0-util \
     android.hardware.audio.common@5.0-util \
     android.hardware.soundtrigger@2.1-impl \
@@ -155,6 +151,7 @@ PRODUCT_COPY_FILES += \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
+    liba2dpoffload \
     android.hardware.bluetooth.audio@2.0-impl \
     audio.bluetooth.default
 
@@ -180,7 +177,7 @@ PRODUCT_PACKAGES += \
     libxml2 \
     Snap \
     libqti-perfd-client \
-    android.hidl.memory.block@1.0 \
+    vendor.qti.hardware.camera.device@1.0.vendor
 
 # CNE
 PRODUCT_PACKAGES += \
@@ -293,16 +290,10 @@ PRODUCT_PACKAGES += \
     android.hidl.base@1.0_system \
     android.hidl.manager@1.0 \
     android.hidl.manager@1.0_system \
-    android.hidl.base@1.0_vendor
 
 # HotwordEnrollement app permissions
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-hotword.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-hotword.xml
-
-# HWBinder
-PRODUCT_PACKAGES += \
-    libhwbinder \
-    libhwbinder.vendor
 
 # Input
 PRODUCT_COPY_FILES += \
@@ -334,7 +325,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libhwbinder \
     libhwbinder.vendor \
-    libhidltransport
+    libhidltransport \
+    libhidltransport.vendor
 
 # Lights
 PRODUCT_PACKAGES += \
@@ -373,24 +365,18 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.nfc@1.2 \
     android.hardware.nfc@1.2-service \
-    android.hardware.secure_element@1.2 \
-    android.hardware.secure_element@1.2-service \
     com.android.nfc_extras \
     com.gsma.services.nfc \
     NfcNci \
     SecureElement \
     Tag
 
-
-# VNDK
-PRODUCT_COPY_FILES += \
-      prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-sp/libc++.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libc++.so \
-
 # OMX
 PRODUCT_PACKAGES += \
     libc2dcolorconvert \
     libcodec2_hidl@1.0.vendor \
     libcodec2_vndk.vendor \
+    libmm-omxcore \
     libOmxAacEnc \
     libOmxAmrEnc \
     libOmxCore \
@@ -400,6 +386,7 @@ PRODUCT_PACKAGES += \
     libOmxVdec \
     libOmxVenc \
     libOmxVidcCommon \
+    libstagefright_softomx \
     libstagefrighthw
 
 # Power
@@ -447,7 +434,6 @@ PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl.oneplus_msmnile \
     android.hardware.sensors@1.0-service.oneplus_msmnile \
     libsensorndkbridge \
-    libgui_vendor
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
@@ -468,7 +454,9 @@ SRC_AUDIO_HAL_DIR := hardware/qcom-caf/sm8150/audio
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     device/oneplus/common \
-    hardware/qcom-caf/sm8150
+    hardware/qcom-caf/sm8150 \
+    hardware/google/pixel 
+
 
 # Telephony
 PRODUCT_PACKAGES += \
@@ -518,6 +506,7 @@ PRODUCT_COPY_FILES += \
     prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-core/libprotobuf-cpp-full.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libprotobuf-cpp-full.so \
     prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-core/libprotobuf-cpp-lite.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libprotobuf-cpp-lite.so
 
+
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service \
@@ -525,9 +514,6 @@ PRODUCT_PACKAGES += \
 # VNDK
 PRODUCT_PACKAGES += \
     libstdc++.vendor \
-    vndk-sp \
-    vndk_package \
-    com.android.vndk.current.on_vendor
 
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-lite-vendorcompat \
