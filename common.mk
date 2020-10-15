@@ -145,105 +145,102 @@ PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/a2dp_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/a2dp_in_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_in_audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
-    frameworks/av/services/audiopolicy/config/bluetooth_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_audio_policy_configuration.xml \
-    frameworks/av/services/audiopolicy/config/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml \
-    frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml
+frameworks/av/services/audiopolicy/config/bluetooth_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_audio_policy_configuration.xml \
+frameworks/av/services/audiopolicy/config/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml \
+frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    android.hardware.bluetooth.audio@2.0-impl \
-    audio.bluetooth.default \
-    libbtconfigstore \
-    libbluetooth_qti \
-    BluetoothQti \
-    libbthost_if \
-    libldacBT_dec \
-    vendor.qti.hardware.bluetooth_audio@2.0.vendor \
-    vendor.qti.hardware.btconfigstore@1.0.vendor \
-    vendor.qti.hardware.btconfigstore@2.0.vendor
+android.hardware.bluetooth.audio@2.0-impl \
+audio.bluetooth.default \
+libbtconfigstore \
+libbluetooth_qti \
+BluetoothQti \
+libbthost_if \
+libldacBT_dec \
+vendor.qti.hardware.bluetooth_audio@2.0.vendor \
+vendor.qti.hardware.btconfigstore@1.0.vendor \
+vendor.qti.hardware.btconfigstore@2.0.vendor
 
 PRODUCT_COPY_FILES += \
-    hardware/qcom-caf/sm8150/audio/configs/common/bluetooth_qti_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_qti_audio_policy_configuration.xml
+hardware/qcom-caf/sm8150/audio/configs/common/bluetooth_qti_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_qti_audio_policy_configuration.xml
 
 
 PRODUCT_PACKAGES += \
-    vendor.qti.hardware.btconfigstore@1.0.vendor
+vendor.qti.hardware.btconfigstore@1.0.vendor
 
 PRODUCT_PACKAGES += \
-    android.hardware.bluetooth.a2dp@1.0-impl \
-    android.hardware.bluetooth.a2dp@1.0-service
+android.hardware.bluetooth.a2dp@1.0-impl \
+android.hardware.bluetooth.a2dp@1.0-service
 
 
 # Boot Control
 PRODUCT_PACKAGES += \
-    android.hardware.boot@1.0-impl:64 \
-    android.hardware.boot@1.0-service \
-    android.hardware.boot@1.0-impl.recovery \
-    bootctrl.msmnile \
-    bootctrl.msmnile.recovery
+android.hardware.boot@1.0-impl:64 \
+android.hardware.boot@1.0-service \
+android.hardware.boot@1.0-impl.recovery \
+bootctrl.msmnile \
+bootctrl.msmnile.recovery
 
 PRODUCT_PACKAGES_DEBUG += \
-    bootctl
+bootctl
 
 # Camera
 PRODUCT_PACKAGES += \
-    android.frameworks.displayservice@1.0 \
-    android.hardware.camera.provider@2.4-impl \
-    android.hardware.camera.provider@2.4-service_64 \
-    libxml2 \
-    Snap \
-    libqti-perfd-client \
-    vendor.oneplus.camera.CameraHIDL@1.0.vendor \
-    vendor.qti.hardware.camera.device@1.0.vendor
+android.frameworks.displayservice@1.0 \
+android.hardware.camera.provider@2.4-impl \
+android.hardware.camera.provider@2.4-service_64 \
+libxml2 \
+Snap \
+libqti-perfd-client \
+vendor.oneplus.camera.CameraHIDL@1.0.vendor \
+vendor.qti.hardware.camera.device@1.0.vendor
 
 # CNE
 PRODUCT_PACKAGES += \
-    cneapiclient \
-    com.quicinc.cne \
-    services-ext
+cneapiclient \
+com.quicinc.cne \
+services-ext
 
 # Common init scripts
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/ueventd.rc:$(TARGET_COPY_OUT_VENDOR)/ueventd.rc
+$(LOCAL_PATH)/rootdir/ueventd.rc:$(TARGET_COPY_OUT_VENDOR)/ueventd.rc
 
 PRODUCT_PACKAGES += \
-    coredump.sh \
-    ftm_power_config.sh \
-    init.class_main.sh \
-    init.crda.sh \
-    init.mdm.sh \
-    init.msm.usb.configfs.rc \
-    init.oem.debug.rc \
-    init.oem.engineermode.sh \
-    init.oem.rc \
-    init.qcom.class_core.sh \
-    init.qcom.coex.sh \
-    init.qcom.crashdata.sh \
-    init.qcom.early_boot.sh \
-    init.qcom.efs.sync.sh \
-    init.qcom.factory.rc \
-    init.qcom.post_boot.sh \
-    init.qcom.rc \
-    init.qcom.sdio.sh \
-    init.qcom.sensors.sh \
-    init.qcom.sh \
-    init.qcom.usb.rc \
-    init.qcom.usb.sh \
-    init.qti.fm.sh \
-    init.qti.ims.sh \
-    init.recovery.qcom.rc \
-    init.target.rc \
-    kmemleak.sh \
-    ueventd.rc \
-    vendor.oem_ftm.rc \
-    vendor.oem_ftm_svc_disable.rc
+coredump.sh \
+ftm_power_config.sh \
+init.class_main.sh \
+init.crda.sh \
+init.mdm.sh \
+init.msm.usb.configfs.rc \
+init.oem.debug.rc \
+init.oem.engineermode.sh \
+init.oem.rc \
+init.qcom.class_core.sh \
+init.qcom.coex.sh \
+init.qcom.crashdata.sh \
+init.qcom.early_boot.sh \
+init.qcom.efs.sync.sh \
+init.qcom.factory.rc \
+init.qcom.post_boot.sh \
+init.qcom.rc \
+init.qcom.sdio.sh \
+init.qcom.sensors.sh \
+init.qcom.sh \
+init.qcom.usb.rc \
+init.qcom.usb.sh \
+init.qti.fm.sh \
+init.qti.ims.sh \
+init.recovery.qcom.rc \
+init.target.rc \
+kmemleak.sh \
+ueventd.rc \
+vendor.oem_ftm.rc \
+vendor.oem_ftm_svc_disable.rc
 
 # Cryptfshw
 PRODUCT_PACKAGES += \
-    vendor.qti.hardware.cryptfshw@1.0.vendor
-
-# Dalvik vm configs
-$(call inherit-product, frameworks/native/build/phone-xhdpi-8192-dalvik-heap.mk)
+vendor.qti.hardware.cryptfshw@1.0.vendor
 
 # Component overrides
 PRODUCT_COPY_FILES += \
