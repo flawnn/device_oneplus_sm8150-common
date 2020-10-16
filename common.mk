@@ -177,6 +177,7 @@ PRODUCT_PACKAGES += \
     libxml2 \
     Snap \
     libqti-perfd-client \
+    vendor.oneplus.camera.CameraHIDL@1.0.vendor \
     vendor.qti.hardware.camera.device@1.0.vendor
 
 # CNE
@@ -519,13 +520,7 @@ PRODUCT_PACKAGES += \
     libprotobuf-cpp-lite-vendorcompat \
     libprotobuf-cpp-full-vendorcompat \
 
-PRODUCT_COPY_FILES += \
-    prebuilts/vndk/v29/arm64/arch-arm-armv8-a/shared/vndk-sp/libbinderthreadstate.so:$(TARGET_COPY_OUT_VENDOR)/lib/libbinderthreadstate.so \
-    prebuilts/vndk/v29/arm64/arch-arm-armv8-a/shared/vndk-sp/libhidlbase.so:$(TARGET_COPY_OUT_VENDOR)/lib/libhidlbase-v29.so \
-    prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-sp/libbinderthreadstate.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbinderthreadstate.so \
-    prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-sp/libhidlbase.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhidlbase-v29.so
-
-# WiFi
+# Wifi
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service \
     hostapd \
