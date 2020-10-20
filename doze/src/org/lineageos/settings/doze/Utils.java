@@ -121,7 +121,7 @@ public final class Utils {
     }
 
     public static boolean sensorsEnabled(Context context) {
-        return isPickUpEnabled(context) || isRaiseToWakeEnabled(context) || isPocketEnabled(context);
+        return isPickUpEnabled(context) || isRaiseToWakeEnabled(context);
     }
 
     protected static Sensor getSensor(SensorManager sm, String type) {
