@@ -151,6 +151,11 @@ PRODUCT_PACKAGES += \
     libbthost_if \
     vendor.qti.hardware.bluetooth_audio@2.0.vendor
 
+# Pixel Offline charger
+PRODUCT_PACKAGES += \
+    charger_res_images \
+    product_charger_res_images
+
 # Camera
 PRODUCT_PACKAGES += \
     android.frameworks.displayservice@1.0 \
