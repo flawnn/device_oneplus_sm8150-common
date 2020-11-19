@@ -564,3 +564,5 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libnl
 
+# Blur
+PRODUCT_PROPERTY_OVERRIDES += persist.sys.sf.disable_blurs=0
