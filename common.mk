@@ -190,7 +190,6 @@ android.hardware.camera.provider@2.4-impl \
 android.hardware.camera.provider@2.4-service_64 \
 libxml2 \
 Snap \
-libqti-perfd-client \
 vendor.oneplus.camera.CameraHIDL@1.0.vendor \
 vendor.qti.hardware.camera.device@1.0.vendor
 
@@ -409,11 +408,7 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.3-service.oneplus_msmnile-libperfmgr \
-    android.hardware.power.stats@1.0-service.oneplus_msmnile
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
+    android.hardware.power@1.2-service-qti
 
 # QMI
 PRODUCT_PACKAGES += \
