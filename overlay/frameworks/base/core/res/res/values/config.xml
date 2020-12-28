@@ -366,7 +366,7 @@
 
     <!-- Names of the key handler classes -->
     <string-array name="config_deviceKeyHandlerClasses" translatable="false">
-        <item>com.aosip.device.DeviceSettings.KeyHandler</item>
+        <item>com.revengeos.device.DeviceSettings.KeyHandler</item>
         <item>org.lineageos.camerahelper.KeyHandler</item>
     </string-array>
 
@@ -389,4 +389,7 @@
 	             OnePlus 7 Pro. This HAL expects a different format for the data instead of the usual (ms)
          timing(the duration which the vibrator is expected to vibrate for). -->
     <bool name="config_hasOnePlusHapticMotor">true</bool>
+
+    <!-- Whether to send camera status intent -->
+    <bool name="config_sendCameraStatusIntent">true</bool>
 </resources>
