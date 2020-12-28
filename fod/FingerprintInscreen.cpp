@@ -92,16 +92,6 @@ Return<void> FingerprintInscreen::onRelease() {
 
 Return<void> FingerprintInscreen::onShowFODView() {
     this->mFodCircleVisible = true;
-    set(DC_DIM_PATH, 0);
-    set(NATIVE_DISPLAY_P3, 0);
-    set(NATIVE_DISPLAY_SRGB, 0);
-    set(NATIVE_DISPLAY_WIDE, 0);
-    this->mVendorDisplayService->setMode(16, 0);
-    this->mVendorDisplayService->setMode(17, 0);
-    this->mVendorDisplayService->setMode(18, 0);
-    this->mVendorDisplayService->setMode(20, 0);
-    this->mVendorDisplayService->setMode(21, 0);
-    this->mVendorDisplayService->setMode(17, 1);
     this->mVendorDisplayService->setMode(OP_DISPLAY_SET_DIM, 1);
 
     return Void();
