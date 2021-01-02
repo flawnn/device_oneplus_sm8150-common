@@ -45,7 +45,7 @@ import androidx.preference.PreferenceGroup;
 import androidx.preference.PreferenceScreen;
 import androidx.preference.TwoStatePreference;
 
-import com.android.internal.util.revengeos.FileUtils;
+import com.android.internal.util.custom.FileUtils;
 import com.revengeos.device.DeviceSettings.Constants;
 
 public class DeviceSettings extends PreferenceFragment
