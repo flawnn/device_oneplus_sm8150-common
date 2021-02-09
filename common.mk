@@ -384,6 +384,7 @@ PRODUCT_BOOT_JARS += \
 
 # Perf
 PRODUCT_PACKAGES += \
+    vendor.qti.hardware.perf@2.0.vendor \
     libqti-perfd-client
 
 # Power

@@ -684,9 +684,6 @@ vendor/bin/pm-service
 vendor/lib64/libperipheral_client.so
 vendor/lib64/libspcom.so
 
-# Perf
-vendor/bin/hw/vendor.qti.hardware.perf@2.2-service
-
 # Power-off alarm
 -product/app/PowerOffAlarm/PowerOffAlarm.apk|4903fdba4ce32c32f3755224dae13a2eee1ce1d0
 system_ext/framework/vendor.qti.hardware.alarm-V1.0-java.jar
