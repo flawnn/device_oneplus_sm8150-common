@@ -22,5 +22,5 @@
 <resources>
     <!-- Doze: does this device support STATE_DOZE?  -->
     <bool name="doze_display_state_supported">true</bool>
-    <color name="config_fodColor">#ccccac</color>
+    <color name="config_fodColor">#00ffffff</color>
 </resources>
