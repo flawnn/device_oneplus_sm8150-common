@@ -22,10 +22,14 @@ ro.gfx.driver.1    u:object_r:exported3_default_prop:s0
 vendor.sys.memplus.    u:object_r:vendor_memplus_prop:s0
 
 # NFC
+persist.nfc.               u:object_r:vendor_nfc_prop:s0
 persist.vendor.nfc.        u:object_r:vendor_nfc_prop:s0
 persist.vendor.oem.nfc.    u:object_r:vendor_nfc_prop:s0
 ro.vendor.nfc.notify_tp    u:object_r:vendor_nfc_prop:s0
 vendor.oem.nfc.            u:object_r:vendor_nfc_prop:s0
+persist.factoryota.reboot  u:object_r:vendor_nfc_prop:s0
+ro.nfc.port                u:object_r:vendor_nfc_prop:s0
+persist.vendor.nfc.delayese u:object_r:vendor_nfc_prop:s0
 
 # OEM dump
 persist.vendor.enable.powerkey.dump    u:object_r:vendor_oem_dump_prop:s0
@@ -39,6 +43,9 @@ ro.boot.prmec    u:object_r:exported_default_prop:s0
 
 # Power HAL
 vendor.powerhal.                        u:object_r:vendor_power_prop:s0
+
+# Secure Element
+ro.boot.product.hardware.sku      u:object_r:exported_default_prop:s0
 
 #Thermal
 vendor.thermal.                         u:object_r:vendor_thermal_prop:s0
