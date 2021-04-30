@@ -4,6 +4,19 @@ genfscon proc /fresh_rate_for_sensor u:object_r:proc_sensor:s0
 genfscon proc /touchpanel u:object_r:proc_touchpanel:s0
 genfscon proc /ultrasound u:object_r:proc_ultrasound:s0
 
+# Power HAL
+genfscon sysfs /devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/sde-crtc-0/early_wakeup                                                                        u:object_r:sysfs_msm_subsys:s0
+genfscon sysfs /devices/platform/soc/2c00000.qcom,kgsl-3d0                                                                                                          u:object_r:sysfs_msm_subsys:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,gpubw                                                                                                                 u:object_r:sysfs_msm_subsys:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,gpubw/devfreq                                                                                                         u:object_r:sysfs_msm_subsys:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,cpu-cpu-llcc-bw                                                                                                       u:object_r:sysfs_msm_subsys:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,cpu-llcc-ddr-bw                                                                                                       u:object_r:sysfs_msm_subsys:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,cpu0-cpu-l3-lat                                                                                                       u:object_r:sysfs_msm_subsys:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,cpu4-cpu-l3-lat                                                                                                       u:object_r:sysfs_msm_subsys:s0
+genfscon sysfs /devices/platform/soc/1d84000.ufshc/clkgate_enable                                                                                                   u:object_r:sysfs_scsi_devices_0000:s0
+genfscon sysfs /devices/platform/soc/1d84000.ufshc/hibern8_on_idle_enable                                                                                           u:object_r:sysfs_scsi_devices_0000:s0
+genfscon proc /sys/kernel/sched_energy_aware                                                                                                                        u:object_r:proc_sched_energy_aware:s0
+
 genfscon sysfs /devices/platform/soc/89c000.i2c/i2c-2/2-005a/leds/vibrator u:object_r:sysfs_vibrator:s0
 genfscon sysfs /devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/aod u:object_r:sysfs_aod:s0
 genfscon sysfs /devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/aod_disable u:object_r:sysfs_aod:s0

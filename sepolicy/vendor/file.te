@@ -5,6 +5,15 @@ type wifi_nv_data_file, file_type, data_file_type;
 # persist
 type persist_camera_file, file_type;
 
+# Power HAL
+type sysfs_iio_devices, fs_type, sysfs_type;
+type sysfs_msm_subsys, sysfs_type, fs_type;
+type sysfs_scsi_devices_0000, sysfs_type, fs_type;
+type sysfs_msm_wlan, sysfs_type, fs_type;
+type proc_sched_energy_aware, proc_type, fs_type;
+type sysfs_power_stats, sysfs_type, fs_type;
+type sysfs_power_stats_ignore, sysfs_type, fs_type;
+
 # proc
 type proc_sensor, fs_type, proc_type;
 type proc_touchpanel, fs_type, proc_type;
