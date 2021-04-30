@@ -12,6 +12,9 @@ $(call inherit-product-if-exists, vendor/oneplus/sm8150-common/sm8150-common-ven
 # Call oneplus firmware
 $(call inherit-product-if-exists, vendor/oneplus/firmware/Android.mk)
 
+# Inherit vibrator
+$(call inherit-product, vendor/qcom/opensource/vibrator/vibrator-vendor-product.mk)
+
 # Additional native libraries
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
