@@ -50,10 +50,11 @@ ro.hwui.texture_cache_size=72
 vendor.iop.enable_uxe=0
 
 # Media
-av.offload.enable=true
-media.settings.xml=/vendor/etc/media_profiles_vendor.xml
-vendor.swvdec.log.level=1
-vendor.vidc.debug.level=1
+debug.media.codec2=2 
+debug.stagefright.ccodec=4
+debug.stagefright.omx_default_rank=512
+vendor.media.omx=0
+debug.stagefright.c2inputsurface=-1
 
 # Memory optimizations
 ro.vendor.qti.sys.fw.bservice_age=5000
