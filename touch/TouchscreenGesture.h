@@ -19,11 +19,11 @@
 
 #include <hidl/MQDescriptor.h>
 #include <hidl/Status.h>
-#include <vendor/lineage/touch/1.0/ITouchscreenGesture.h>
+#include <vendor/hentai/touch/1.0/ITouchscreenGesture.h>
 #include <map>
 
 namespace vendor {
-namespace lineage {
+namespace hentai {
 namespace touch {
 namespace V1_0 {
 namespace implementation {
@@ -36,7 +36,7 @@ class TouchscreenGesture : public ITouchscreenGesture {
   public:
     // Methods from ::vendor::lineage::touch::V1_0::ITouchscreenGesture follow.
     Return<void> getSupportedGestures(getSupportedGestures_cb resultCb) override;
-    Return<bool> setGestureEnabled(const ::vendor::lineage::touch::V1_0::Gesture& gesture,
+    Return<bool> setGestureEnabled(const ::vendor::hentai::touch::V1_0::Gesture& gesture,
                                    bool enabled) override;
 
   private:

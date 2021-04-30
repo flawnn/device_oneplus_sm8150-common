@@ -21,8 +21,8 @@
 #include <hidl/HidlTransportSupport.h>
 #include "TouchscreenGesture.h"
 
-using ::vendor::lineage::touch::V1_0::ITouchscreenGesture;
-using ::vendor::lineage::touch::V1_0::implementation::TouchscreenGesture;
+using ::vendor::hentai::touch::V1_0::ITouchscreenGesture;
+using ::vendor::hentai::touch::V1_0::implementation::TouchscreenGesture;
 
 int main() {
     android::sp<ITouchscreenGesture> gestureService = new TouchscreenGesture();

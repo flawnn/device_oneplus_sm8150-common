@@ -28,7 +28,7 @@ cc_binary {
         "libbinder",
         "libhidlbase",
         "libutils",
-        "vendor.lineage.touch@1.0",
+        "vendor.hentai.touch@1.0",
     ],
     proprietary: true,
 }
