@@ -35,7 +35,7 @@
 #define OP_DISPLAY_SET_DIM 10
 
 namespace vendor {
-namespace hentai {
+namespace lineage {
 namespace biometrics {
 namespace fingerprint {
 namespace inscreen {
