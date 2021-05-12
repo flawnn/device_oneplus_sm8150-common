@@ -41,8 +41,14 @@ BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_SEPARATED_DTBO := true
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 TARGET_KERNEL_CLANG_COMPILE := true
+TARGET_KERNEL_ARCH := arm64
+TARGET_KERNEL_HEADER_ARCH := arm64
+TARGET_KERNEL_CLANG_VERSION := proton
 TARGET_KERNEL_SOURCE := kernel/oneplus/sm8150
-TARGET_KERNEL_CONFIG := gulch_defconfig
+TARGET_KERNEL_CONFIG := dora_defconfig
+TARGET_KERNEL_ADDITIONAL_FLAGS += AR=llvm-ar NM=llvm-nm LD=ld.lld DTC_EXT=$(shell pwd)/out/host/linux-x86/bin/dtc OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump STRIP=llvm-strip
+TARGET_KERNEL_CLANG_PATH := $(shell pwd)/prebuilts/clang/host/linux-x86/clang-$(TARGET_KERNEL_CLANG_VERSION)
+TARGET_KERNEL_HEADERS := kernel/oneplus/sm8150
 
 # Platform
 BOARD_USES_QCOM_HARDWARE := true
